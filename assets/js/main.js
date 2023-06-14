@@ -1,10 +1,3 @@
-/**
-* Template Name: UpConstruction
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -211,3 +204,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+let btn = document.getElementById("btn");
+let text = document.getElementById("text");
+let qrCode = document.getElementById("qr-code");
+let img = document.getElementById("img");
+
+btn.onclick = function () {
+  if (text.value.length > 0) {
+    img.src =
+      "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+      text.value;
+    qrCode.classList.add("show");
+  } else {
+    text.classList.add("error");
+    setTimeout(() => {
+      text.classList.remove("error");
+    }, 1000);
+  }
+};

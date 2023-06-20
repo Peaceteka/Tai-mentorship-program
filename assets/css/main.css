@@ -52,10 +52,53 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,{
   font-family: var(--font-primary);
 }
+.application-header #h5{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    color: #2e3135;
+}
+  
+  
+.application-header #h5:before,
+.application-header #h5:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: var(--color-primary);
+    display: inline-block;
+}
+.application-header #h5:before {
+  margin: 0 15px 10px 0;
+}
 
+.application-header #h5:after {
+  margin: 0 0 10px 15px;
+}
+.application-header #p{
+  text-align: center;
+}
+.application-header #eligibility{
+  font-weight: 700;
+}
+.application-header .p{
+  justify-content: center;
+  align-items: center;
+}
+#application #btn{
+  display: block;
+  width: 120px;
+  height: 45px;
+  margin: 0 auto;
+  border: 0;
+  background: #feb900;
+  color: #fff;
+  border-radius: 5px;
+}
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -368,8 +411,8 @@ section {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--color-default);
-    font-weight: 400;
+    color: var(--color-default);#d0cfcf
+    font: weight 400 ;
   }
 
   .navbar .dropdown ul a i {
